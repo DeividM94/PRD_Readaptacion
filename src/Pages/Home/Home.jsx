@@ -1,12 +1,16 @@
 import React from "react";
 import "./home.scss";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+
+  const navigate = useNavigate()
+
   return (
     <>
       <div className="seccion1">
         <img src="./logo-pide-cita.png" className="imagen" alt="Logo" />
-        <button className="boton">Pedir cita</button>
+        <button className="boton" onClick={()=>navigate('/pide-cita')}>Pedir cita</button>
       </div>
 
       <div className="seccion2">
@@ -35,7 +39,7 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className="seccion3">
+      <div className="seccion3" id="sobre-mi">
         <div className="articulo m-5">
           <h2>Sobre mí</h2>
           <h3>Alejandro Hernández Cerezo</h3>
@@ -93,7 +97,7 @@ export const Home = () => {
       <div className="seccion4">
         <img src="./contacto-cita.jpg" alt="" />
         <div className="botones">
-          <button className="boton">Pide cita</button>
+          <button className="boton" onClick={()=>navigate('/pide-cita')}>Pide cita</button>
           <button className="boton">Contacto</button>
         </div>
       </div>
