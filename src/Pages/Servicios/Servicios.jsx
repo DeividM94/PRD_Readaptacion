@@ -1,8 +1,14 @@
 import React from "react";
-import { Card, Button, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import "./Servicios.scss";
+import { useNavigate } from "react-router-dom";
+import { useWhatsApp } from "../../hooks/useWhatsApp";
 
 export const Servicios = () => {
+
+  const navigate = useNavigate()
+  const { handleWhatsAppClick } = useWhatsApp();
+
   return (
     <div className="servicios">
       <h1 className="pt-5">Sesiones Presenciales</h1>
@@ -74,7 +80,7 @@ export const Servicios = () => {
         </Row>
 
         <div className="text-center pb-5">
-          <button className="boton">
+          <button className="boton" onClick={()=>navigate('/pide-cita')}>
             Pide Cita
           </button>
         </div>
@@ -108,7 +114,7 @@ export const Servicios = () => {
         </Row>
 
         <div className="text-center pb-5">
-          <button className="boton">
+          <button className="boton" onClick={handleWhatsAppClick}>
             Escríbeme
           </button>
         </div>
