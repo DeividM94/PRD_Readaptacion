@@ -1,0 +1,94 @@
+.formacion-detalles-section {
+  background-color: #2c3e50; 
+  padding: 40px 0; 
+  min-height: calc(100vh - 73.87px - 121.61px);
+}
+
+.formacion-detalles-container {
+  max-width: 1140px; 
+  margin: 0 auto;
+  background-color: #2c3e50;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .formacion-details-card {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    .card-body {
+      padding: 2rem;
+
+      .card-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #3498db;
+      }
+
+      button {
+        background-color: #3498db;
+        border: none;
+        font-size: 1rem;
+        padding: 10px 20px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #2980b9;
+        }
+      }
+    }
+
+    /* Ajustamos la imagen para que ocupe todo el lado izquierdo */
+    .formacion-details-image {
+      height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+      width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+      margin-bottom: 0; /* Elimina cualquier margen inferior */
+      
+      img {
+        width: 100%;
+        height: 100%; /* Asegura que la imagen ocupe toda la altura */
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .formacion-details-info {
+    margin-bottom: 30px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 1rem;
+        color: #fff;
+        margin-bottom: 10px;
+
+        strong {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
