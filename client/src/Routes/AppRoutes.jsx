@@ -8,6 +8,7 @@ import { PideCita } from '../Pages/PideCita/PideCita';
 import { Contacto } from '../Pages/Contacto/Contacto';
 import { Formaciones } from '../Pages/Formaciones/Formaciones';
 import { FormacionDetalles } from '../Pages/Formaciones/FormacionDetalles/FormacionDetalles';
+import { Carrito } from '../Pages/Carrito/Carrito';
 
 
 
@@ -23,6 +24,7 @@ export const AppRoutes = () => {
     <Route path='/contacto' element={<Contacto />} />
     <Route path='/formaciones' element={<Formaciones />} />
     <Route path='/Formaciones/:id' element={<FormacionDetalles />} />
+    <Route path="/carrito" element={<Carrito />} />
    </Routes>
    <FooterApp/>
    </BrowserRouter>
