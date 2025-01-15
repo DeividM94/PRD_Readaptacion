@@ -84,7 +84,7 @@ export const Formaciones = () => {
                           </div>
                           <div className="d-flex justify-content-between align-items-center">
                             <h3 className="text-primary mb-0">
-                              {formacion.price} €
+                              {formacion.precio} €
                             </h3>
                             <Button
                               variant="primary"

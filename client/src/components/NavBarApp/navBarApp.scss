@@ -9,15 +9,15 @@
     }
   }
 
-  // Centrar los enlaces solo en modo desplegable
-  @media (max-width: 992px) { // Bootstrap breakpoint para 'lg' y menor
+  
+  @media (max-width: 992px) { 
     .navbar-collapse.show & {
-      width: 100%; // Ocupa todo el ancho disponible
+      width: 100%; 
       a {
-        display: block; // Cada enlace ocupa su propia línea
-        text-align: center; // Centrar el texto
-        margin: 10px 0; // Espaciado vertical entre enlaces
-        margin-left: 0; // Elimina el margen izquierdo
+        display: block; 
+        text-align: center; 
+        margin: 10px 0;
+        margin-left: 0; 
       }
     }
   }
@@ -50,7 +50,7 @@
   margin-right: 10px;
 }
 
-/* Estilo para el contador de productos */
+
 .cart-count {
   position: absolute;
   top: -5px;

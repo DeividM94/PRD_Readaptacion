@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa"; // Importamos el icono del carrito
+import { FaShoppingCart } from "react-icons/fa"; 
+import { CartContext } from "../../context/CartContext";
 import "./NavBarApp.scss";
 
 export const NavBarApp = () => {
-  // Recuperamos los productos del carrito desde localStorage
-  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  const { cart } = useContext(CartContext); // Obtenemos el carrito desde el contexto
 
   // Calculamos el total de productos en el carrito
-  const totalItems = cartItems.reduce((acc, item) => acc + item.plazas, 0);
+  const totalItems = cart.reduce((acc, item) => acc + item.plazas, 0);
 
   return (
     <Navbar expand="lg" className="bg-dark">
@@ -28,7 +28,7 @@ export const NavBarApp = () => {
             
             {/* Icono de carrito con el contador */}
             <Link to="/carrito" className="navbar-cart-icon">
-              <FaShoppingCart size={30} className="cart-icon" />
+              <FaShoppingCart size={25} className="cart-icon" />
               {totalItems > 0 && (
                 <span className="cart-count">{totalItems}</span>
               )}
