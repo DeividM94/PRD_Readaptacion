@@ -9,6 +9,7 @@ import { Contacto } from '../Pages/Contacto/Contacto';
 import { Formaciones } from '../Pages/Formaciones/Formaciones';
 import { FormacionDetalles } from '../Pages/Formaciones/FormacionDetalles/FormacionDetalles';
 import { Carrito } from '../Pages/Carrito/Carrito';
+import { Checkout } from '../Pages/Checkout/Checkout';
 
 
 
@@ -25,6 +26,7 @@ export const AppRoutes = () => {
     <Route path='/formaciones' element={<Formaciones />} />
     <Route path='/Formaciones/:id' element={<FormacionDetalles />} />
     <Route path="/carrito" element={<Carrito />} />
+    <Route path="/checkout" element={<Checkout />} />
    </Routes>
    <FooterApp/>
    </BrowserRouter>

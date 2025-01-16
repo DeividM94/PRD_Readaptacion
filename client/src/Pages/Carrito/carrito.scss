@@ -1,51 +1,5 @@
 .carrito-section {
-  .carrito-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
-
-  .cart-summary {
-    border-top: 1px solid #ddd;
-    padding-top: 15px;
-
-    // Ajustes para la disposición en pantallas grandes (web)
-    @media (min-width: 768px) {
-      .d-flex {
-        flex-direction: row;  /* Disposición horizontal en pantallas grandes */
-        justify-content: space-between; /* Espacio entre los elementos */
-      }
-
-      .btn {
-        width: auto; /* Los botones deben tener un ancho ajustado */
-      }
-
-      .cart-summary h4 {
-        text-align: left; /* Alineación a la izquierda en pantallas grandes */
-      }
-    }
-
-    // Cambios para pantallas pequeñas (mobile)
-    @media (max-width: 767px) {
-      .d-flex {
-        flex-direction: column;
-        align-items: center; /* Centrado vertical de los elementos */
-        justify-content: center;
-      }
-
-      .btn {
-        width: 100%; /* Los botones ocupan todo el ancho disponible */
-      }
-
-      .cart-summary h4 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .my-2 {
-        margin-top: 15px;
-      }
-    }
-  }
+  background-color: #2c3e50; 
+  padding: 40px 0; 
+  min-height: calc(100vh - 73.87px - 121.61px);
 }
