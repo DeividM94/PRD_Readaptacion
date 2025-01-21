@@ -24,7 +24,7 @@ export const AppRoutes = () => {
     <Route path='/pide-cita' element={<PideCita />} />
     <Route path='/contacto' element={<Contacto />} />
     <Route path='/formaciones' element={<Formaciones />} />
-    <Route path='/Formaciones/:id' element={<FormacionDetalles />} />
+    <Route path='/Formaciones/:formacion_id' element={<FormacionDetalles />} />
     <Route path="/carrito" element={<Carrito />} />
     <Route path="/checkout" element={<Checkout />} />
    </Routes>

@@ -6,7 +6,6 @@ import fetchData from "./../../helper/axiosHelper";
 
 export const Formaciones = () => {
   const [formaciones, setFormaciones] = useState([]);
-  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true); // Estado para gestionar la carga
 
   const navigate = useNavigate();
@@ -18,9 +17,6 @@ export const Formaciones = () => {
         setFormaciones(data);
         setLoading(false); // Se establece como false cuando los datos están cargados
       } catch (err) {
-        setError(
-          "No se pudieron cargar las formaciones. Inténtalo nuevamente."
-        );
         setLoading(false); // También se establece como false si ocurre un error
         console.log(err);
       }
@@ -29,8 +25,8 @@ export const Formaciones = () => {
     cargarFormaciones();
   }, []);
 
-  const handleReservationClick = (id) => {
-    navigate(`/formaciones/${id}`);
+  const handleReservationClick = (formacion_id) => {
+    navigate(`/formaciones/${formacion_id}`);
   };
 
   return (
@@ -38,8 +34,7 @@ export const Formaciones = () => {
       <Container fluid className="formacion-container my-5 px-4 px-lg-5">
         <h1 className="text-center text-white mb-4">Nuestras Formaciones</h1>
 
-        {/* Mostrar error si no se pueden cargar las formaciones */}
-        {error && <div className="alert alert-danger">{error}</div>}
+    
 
         {/* Mostrar spinner mientras se están cargando los datos */}
         {loading ? (
@@ -50,7 +45,7 @@ export const Formaciones = () => {
           <Row>
             {formaciones.length > 0 ? (
               formaciones.map((formacion) => (
-                <Col key={formacion.id} lg={12} className="mb-4">
+                <Col key={formacion.formacion_id} lg={12} className="mb-4">
                   <Card className="formacion-card h-100">
                     <Row className="g-0">
                       {/* Imagen a la izquierda */}
@@ -88,7 +83,7 @@ export const Formaciones = () => {
                             </h3>
                             <Button
                               variant="primary"
-                              onClick={() => handleReservationClick(formacion.id)}
+                              onClick={() => handleReservationClick(formacion.formacion_id)}
                             >
                               Reservar ahora
                             </Button>

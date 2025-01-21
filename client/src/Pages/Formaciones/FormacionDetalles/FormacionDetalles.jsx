@@ -9,7 +9,7 @@ import "./formacionDetalles.scss";
 import SuccessModal from "../../../components/SuccessModal/SuccesModal";
 
 export const FormacionDetalles = () => {
-  const { id } = useParams();
+  const { formacion_id } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const [formacion, setFormacion] = useState(null);
@@ -22,7 +22,7 @@ export const FormacionDetalles = () => {
     const fetchFormacion = async () => {
       try {
         setLoading(true);
-        const data = await fetchData(`formaciones/${id}`, "GET");
+        const data = await fetchData(`formaciones/${formacion_id}`, "GET");
         setFormacion(data);
       } catch (err) {
         setError("No se pudo cargar la información. Inténtalo nuevamente.");
@@ -31,7 +31,7 @@ export const FormacionDetalles = () => {
       }
     };
     fetchFormacion();
-  }, [id]);
+  }, [formacion_id]);
 
   const increasePlazas = () => plazas < 5 && setPlazas(plazas + 1);
   const decreasePlazas = () => plazas > 1 && setPlazas(plazas - 1);

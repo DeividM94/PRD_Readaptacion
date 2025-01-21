@@ -23,20 +23,11 @@ export const CartProvider = ({ children }) => {
 
   // Agregar un producto al carrito o actualizar las plazas si ya existe
   const addToCart = (item, plazas) => {
-    const existingIndex = cart.findIndex((cartItem) => cartItem.id === item.id);
-    const updatedCart = [...cart]; // Crear una copia del carrito actual
+  const updatedCart = [{ ...item, plazas }]; // Reemplazar el carrito con el nuevo ítem
 
-    if (existingIndex !== -1) {
-      // Si el producto ya existe, sumar las plazas
-      updatedCart[existingIndex].plazas += plazas;
-    } else {
-      // Si no existe, agregar el nuevo curso al carrito
-      updatedCart.push({ ...item, plazas });
-    }
-
-    // Actualizar el carrito en el estado y en localStorage
-    updateCart(updatedCart);
-  };
+  // Actualizar el carrito en el estado y en localStorage
+  updateCart(updatedCart);
+};
   
   // Eliminar un producto del carrito
   const removeFromCart = (id) => {

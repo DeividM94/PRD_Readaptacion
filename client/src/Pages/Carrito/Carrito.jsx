@@ -46,7 +46,7 @@ export const Carrito = () => {
             ) : (
               <div>
                 {cart.map((item) => (
-                  <Card key={item.id} className="mb-3 carrito-card p-2 mt-5">
+                  <Card key={item.formacion_id} className="mb-3 carrito-card p-2 mt-5">
                     <Card.Body>
                       <Row className="align-items-center">
                         <Col xs={12} md={8}>

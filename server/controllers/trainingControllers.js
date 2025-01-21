@@ -16,7 +16,7 @@ class TrainingControllers {
  
   getOneTraining = async (req, res) => {
     const { id } = req.params;
-    const query = 'SELECT * FROM formaciones WHERE id = ?';
+    const query = 'SELECT * FROM formaciones WHERE formacion_id = ?';
 
     try {
       const [results] = await promisePool.query(query, [id]);
